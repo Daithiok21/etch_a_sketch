@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Etch_A_Sketch</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        
+    <script>
+        $(document).ready(function(){
+            var $newdiv;
+            
+            for (var i=1; i<65; i++){
+                $newdiv =$("<div class='block'></div>").text(i);
+                $('#container').append($newdiv);
+            };
+            
+            $('.block').on('mouseover', function(){
+                $(this).css('background-color', 'blue')
+            });
+
+        });  
+        
+        
+        
+    </script>
+    </body>
+
+
+</html>

@@ -1,0 +1,16 @@
+.block{
+    border: 1px solid green;
+    display:inline-block;
+    min-width: 11%;
+    min-height: 11%;
+    
+    
+}
+
+#container{
+    min-width: 90%;
+}
+
+.row{
+    
+}
