@@ -7,13 +7,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
+        <div id="#button"><button>Press me</button></div>
         <div id="container"></div>
         
     <script>
         $(document).ready(function(){
             var $newdiv;
             
-            for (var i=1; i<65; i++){
+            for (var i=1; i<256; i++){
                 $newdiv =$("<div class='block'></div>").text(i);
                 $('#container').append($newdiv);
             };
@@ -21,6 +22,19 @@
             $('.block').on('mouseover', function(){
                 $(this).css('background-color', 'blue')
             });
+            
+            $('button').click(function(){
+                $('.block').remove();
+                var amount = prompt("Please enter number of blocks (1-64):");
+                console.log(amount);
+                
+                for (var x=0; x< amount; x++){
+                    $newerdiv =$("<div class='block'></div>").text(x);
+                    $('#container').append($newerdiv);
+                }
+                
+                
+            })
 
         });  
         
